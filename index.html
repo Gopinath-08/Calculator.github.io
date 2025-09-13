@@ -6,7 +6,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Calculator</title>
+  <title>Modern Calculator</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #141e30, #243b55);
+    }
+
+    .container {
+      width: 350px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      padding: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Display */
+    .output input {
+      width: 100%;
+      height: 70px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      font-size: 2rem;
+      text-align: right;
+      padding: 10px 20px;
+      color: #fff;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+                  inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Buttons */
+    .btns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    button {
+      height: 65px;
+      border: none;
+      outline: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      border-radius: 15px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
+                  -4px -4px 8px rgba(255, 255, 255, 0.05);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .sp {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .equal {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00d2ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 20px;
+      text-align: center;
+      width: 180px;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+  </style>
 </head>
 
 <body>
@@ -35,35 +154,17 @@
       <button onclick="insert('.')">.</button>
       <button onclick="calc()" class="sp equal">=</button>
     </div>
-    <div class="appmenu">
-      <div class="icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu">
-        <div class="blue"></div>
-        <div class="orange"></div>
-        <div class="red"></div>
-        <div class="purple"></div>
-        <div class="pink"></div>
-      </div>
-    </div>
-    
   </div>
-   
-    <footer>
-  <div class="devcontainer">
-    <div class="footer-left">
-      <p>Developed by <a href="https://instagram.com/gopinath.08?igshid=YmMyMTA2M2Y=">Gopinath Majhi</a></p>
-    </div>
-   
-    
-  </div>
-</footer>
-<a href="/base.apk" download class="download-btn">Download APK</a>
 
-  
+  <footer>
+    <div class="devcontainer">
+      <div class="footer-left">
+        <p>Developed by <a href="https://instagram.com/gopinath.08?igshid=YmMyMTA2M2Y=">Gopinath Majhi</a></p>
+      </div>
+    </div>
+  </footer>
+  <a href="/base.apk" download class="download-btn">Download APK</a>
+
   <script src="script.js"></script>
 </body>
 
